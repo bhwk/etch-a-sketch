@@ -10,13 +10,11 @@ function makeRows(rows, cols) {
   };
 };
 
-function changeColor(item){
-}
 
 makeRows(16, 16);
 
 const gridItem = document.querySelectorAll('.grid-item');
 
 gridItem.forEach((item)=> {
-    item.addEventListener('mouseover', changeColor(item));
-});
+    item.addEventListener('mouseover', e=> e.target.classList.add('change-background')
+)});
