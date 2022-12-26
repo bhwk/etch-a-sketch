@@ -1,15 +1,18 @@
 const container = document.getElementById("container");
 const sizeChange = document.getElementById("sizeChange");
+const canvasSize = 800;
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
+  container.style.setProperty('--canvas-size', canvasSize);
+  container.style.setProperty('--row-height', canvasSize/rows);
+  container.style.setProperty('--column-width', canvasSize/cols);
   
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
     // cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
-    cell.style.setProperty('--item-width', (960/rows));
   };
 
   const gridItem = document.querySelectorAll('.grid-item');
