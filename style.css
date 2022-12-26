@@ -1,11 +1,12 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
+    --item-width: 1;
   }
   
   #container {
     display: grid;
-    max-width: 960px;
+    max-width: 1000px;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     border: 5px red solid;
@@ -13,7 +14,7 @@
   
   .grid-item {
     padding:5px;
-
+    width: var(--item-width)px;
     
   }
 
