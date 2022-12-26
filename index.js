@@ -22,7 +22,6 @@ function makeRows(rows, cols) {
 };
 
 function reset(){
-  // document.querySelectorAll('.grid-item').forEach((item)=> {item.removeEventListener('mouseover', e=> e.target.classList.add('change-background'))});
   document.querySelectorAll('.grid-item').forEach((e)=> e.parentNode.removeChild(e));
   let canvasRows = prompt("Enter Rows(Max 100): ");
   let canvasCols = prompt("Enter Columns(Max 100): ");
